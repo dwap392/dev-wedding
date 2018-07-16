@@ -1,0 +1,67 @@
+<%= form_with(model: manage, local: true) do |form| %>
+  <% if manage.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(manage.errors.count, "error") %> prohibited this manage from being saved:</h2>
+
+      <ul>
+      <% manage.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :code %>
+    <%= form.number_field :code %>
+  </div>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :top %>
+    <%= form.text_area :top %>
+  </div>
+
+  <div class="field">
+    <%= form.label :drink %>
+    <%= form.text_area :drink %>
+  </div>
+
+  <div class="field">
+    <%= form.label :coldstarter %>
+    <%= form.text_area :coldstarter %>
+  </div>
+
+  <div class="field">
+    <%= form.label :warmstarter %>
+    <%= form.text_area :warmstarter %>
+  </div>
+
+  <div class="field">
+    <%= form.label :soup %>
+    <%= form.text_area :soup %>
+  </div>
+
+  <div class="field">
+    <%= form.label :seafood %>
+    <%= form.text_area :seafood %>
+  </div>
+
+  <div class="field">
+    <%= form.label :main %>
+    <%= form.text_area :main %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dessert %>
+    <%= form.text_area :dessert %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

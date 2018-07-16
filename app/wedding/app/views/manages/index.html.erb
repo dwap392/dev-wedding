@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Manages</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Code</th>
+      <th>Name</th>
+      <th>Top</th>
+      <th>Drink</th>
+      <th>Coldstarter</th>
+      <th>Warmstarter</th>
+      <th>Soup</th>
+      <th>Seafood</th>
+      <th>Main</th>
+      <th>Dessert</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @manages.each do |manage| %>
+      <tr>
+        <td><%= manage.code %></td>
+        <td><%= manage.name %></td>
+        <td><%= manage.top %></td>
+        <td><%= manage.drink %></td>
+        <td><%= manage.coldstarter %></td>
+        <td><%= manage.warmstarter %></td>
+        <td><%= manage.soup %></td>
+        <td><%= manage.seafood %></td>
+        <td><%= manage.main %></td>
+        <td><%= manage.dessert %></td>
+        <td><%= link_to 'Show', manage %></td>
+        <td><%= link_to 'Edit', edit_manage_path(manage) %></td>
+        <td><%= link_to 'Destroy', manage, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Manage', new_manage_path %>
