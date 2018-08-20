@@ -1,0 +1,57 @@
+<!--SERVICE SECTION START-->
+<section id="course" >
+<div class="container">
+<div class="row text-center header">
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 animate-in" data-anim-type="fade-in-up">
+<h3>Today's Course</h3>
+<hr />
+</div>
+</div>
+<div class="row animate-in" data-anim-type="fade-in-up">
+<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+<div class="services-wrapper">
+<%# <i class="ion-document"></i> %>
+<h3><%= link_to 'ドリンク', drink_path(params[:code]), method: :GET %></h3>
+<%# <h4>[料理名が入る]</h4>%>
+</div>
+</div>
+<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+<div class="services-wrapper">
+<%# <i class="ion-document"></i> %>
+<h3><%= link_to '前菜', coldstarter_path(params[:code]), method: :GET %></h3>
+<h4>リゾーニとたらば蟹のセルクル仕立て野菜のムースと共に</h4>
+</div>
+</div>
+<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+<div class="services-wrapper">
+<%# <i class="ion-document"></i> %>
+<h3><%= link_to 'スープ', soup_path(params[:code]), method: :GET %></h3>
+<h4>小さなコンソメスープ</h4>
+</div>
+</div>
+<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+<div class="services-wrapper">
+<%# <i class="ion-document"></i> %>
+<h3><%= link_to '魚料理', seafood_path(params[:code]), method: :GET %></h3>
+<h4>鱸のソテー 〜グリーンアスパラガスときのこ添え　磯の香りのソース〜</h4>
+</div>
+</div>
+<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+<div class="services-wrapper">
+<%# <i class="ion-document"></i> %>
+<h3><%= link_to '肉料理', main_path(params[:code]), method: :GET %></h3>
+<h4>牛フィレ肉と鴨のフォアグラのパイ包み焼き〜マデラ酒の香るソース〜</h4>
+</div>
+</div>
+<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+<div class="services-wrapper">
+<%# <i class="ion-document"></i> %>
+<h3><%= link_to 'デザート', dessert_path(params[:code]), method: :GET %></h3>
+<h4>季節のフルーツとソルベ</h4>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+<!--SERVICE SECTION END-->

@@ -29,31 +29,8 @@
 <![endif]-->
 </head>
 <body data-spy="scroll" data-target="#menu-section">
-<!--MENU SECTION START-->
-<div class="navbar navbar-inverse navbar-fixed-top scroll-me" id="menu-section" >
-<div class="container">
-<div class="navbar-header">
-<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-<span class="icon-bar"></span>
-<span class="icon-bar"></span>
-<span class="icon-bar"></span>
-</button>
-<a class="navbar-brand" href="#">
 
-Kaede & Naoki's Wedding 
-
-</a>
-</div>
-<div class="navbar-collapse collapse">
-<ul class="nav navbar-nav navbar-right">
-<li><a href="#message">メッセージ</a></li>
-<li><a href="#course">本日のお料理</a></li>
-</ul>
-</div>
-
-</div>
-</div>
-<!--MENU SECTION END-->
+<%= render 'shared/menuSection' %>
 
 <!--MESSAGE SECTION START-->
 <section id="message" >
@@ -86,70 +63,7 @@ Kaede & Naoki's Wedding
 
 <!--MESSAGE SECTION END-->
 
-<!--SERVICE SECTION START-->
-<section id="course" >
-<div class="container">
-<div class="row text-center header">
-<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 animate-in" data-anim-type="fade-in-up">
-<h3>Today's Course</h3>
-<hr />
-</div>
-</div>
-<div class="row animate-in" data-anim-type="fade-in-up">
-<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-<div class="services-wrapper">
-<i class="ion-document"></i>
-<h3><%= link_to 'ドリンク', drink_path(params[:code]), method: :GET %></h3>
-<h4>[料理名が入る]</h4>
-</div>
-</div>
-<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-<div class="services-wrapper">
-<i class="ion-scissors"></i>
-<h3><%= link_to '冷前菜', coldstarter_path(params[:code]), method: :GET %></h3>
-<h4>[料理名が入る]</h4>
-</div>
-</div>
-<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-<div class="services-wrapper">
-<i class="ion-clipboard"></i>
-<h3><%= link_to '温前菜', warmstarter_path(params[:code]), method: :GET %></h3>
-<h4>[料理名が入る]</h4>
-</div>
-</div>
-<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-<div class="services-wrapper">
-<i class="ion-calendar"></i>
-<h3><%= link_to 'スープ', soup_path(params[:code]), method: :GET %></h3>
-<h4>[料理名が入る]</h4>
-</div>
-</div>
-<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-<div class="services-wrapper">
-<i class="ion-erlenmeyer-flask"></i>
-<h3><%= link_to '魚料理', seafood_path(params[:code]), method: :GET %></h3>
-<h4>[料理名が入る]</h4>
-</div>
-</div>
-<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-<div class="services-wrapper">
-<i class="ion-monitor"></i>
-<h3><%= link_to '肉料理', main_path(params[:code]), method: :GET %></h3>
-<h4>[料理名が入る]</h4>
-</div>
-</div>
-<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-<div class="services-wrapper">
-<i class="ion-pinpoint"></i>
-<h3><%= link_to 'デザート', drink_path(params[:code]), method: :GET %></h3>
-<h4>[料理名が入る]</h4>
-</div>
-</div>
-
-</div>
-</div>
-</section>
-<!--SERVICE SECTION END-->
+<%= render 'shared/serviceSection' %>
 
 <!-- JAVASCRIPT FILES PLACED AT THE BOTTOM TO REDUCE THE LOADING TIME -->
 <!-- CORE JQUERY -->
