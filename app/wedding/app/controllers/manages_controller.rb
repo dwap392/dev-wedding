@@ -1,4 +1,7 @@
 class ManagesController < ApplicationController
+
+  http_basic_authenticate_with :name => 'kaede', :password => 'naoki'
+
   before_action :set_manage, only: [:show, :edit, :update, :destroy]
 
   # GET /manages
