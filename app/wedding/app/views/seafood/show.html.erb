@@ -44,9 +44,20 @@
 
 </div>
 </div>
+
 <div class="row animate-in" data-anim-type="fade-in-up">
 
 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+<!--if/else start-->
+<% nowTime=Time.now.strftime("%H%M").to_i %>
+
+<% if nowTime < 259 %>
+
+<%= render 'shared/commingsoon' %>
+
+<% else %>
+
 <h2><%= render 'shared/callmessage' %></h2>
 </br>
 
@@ -60,9 +71,9 @@
 <h4>付け合わせのお野菜と共に貝類からとったジュースを煮詰めバターとイタリアンパセリを加えた磯の香をイメージしたソースを付けてお召し上がりくださいませ。</h4>
 <h5>(新郎新婦からのコメント) イタリアへ行った時にも美味しい魚料理が多かったのですが、絶品だったために選びました。</h5>
 
+<% end %>
+
 </div>
-
-
 
 </div>
 </div>

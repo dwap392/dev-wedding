@@ -43,9 +43,20 @@
 
 </div>
 </div>
+
 <div class="row animate-in" data-anim-type="fade-in-up">
 
 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+<!--if/else start-->
+<% nowTime=Time.now.strftime("%H%M").to_i %>
+
+<% if nowTime < 2359 %>
+
+<%= render 'shared/commingsoon' %>
+
+<% else %>
+
 <h2><%= render 'shared/callmessage' %></h2>
 </br>
 
@@ -58,9 +69,9 @@
 <h4>さっぱりとしたフランボワーズのシャーベットと夏の果実（巨峰・パパイヤ・マンゴー）をオレンジ果汁でマリネしたフルーツの組み合わせです</h4>
 <h5>(新郎新婦からのコメント) ぜひ、ウェディングケーキともご一緒にお召し上がりください</h5>
 
+<% end %>
+
 </div>
-
-
 
 </div>
 </div>

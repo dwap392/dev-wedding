@@ -44,9 +44,20 @@
 
 </div>
 </div>
+
 <div class="row animate-in" data-anim-type="fade-in-up">
 
 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+<!--if/else start-->
+<% nowTime=Time.now.strftime("%H%M").to_i %>
+
+<% if nowTime < 2359 %>
+
+<%= render 'shared/commingsoon' %>
+
+<% else %>
+
 <h2><%= render 'shared/callmessage' %></h2>
 </br>
 
@@ -61,9 +72,9 @@
 <h4>それぞれの相性を楽しんで頂きたい一品です。</h4>
 <h5>(新郎新婦からのコメント) 見た目も味も、最高に気に入っていて、ここで披露宴を行う決め手になった料理でした。ぜひご賞味ください。</h5>
 
+<% end %>
+
 </div>
-
-
 
 </div>
 </div>

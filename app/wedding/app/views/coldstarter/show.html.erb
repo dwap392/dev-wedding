@@ -43,9 +43,20 @@
 
 </div>
 </div>
+
 <div class="row animate-in" data-anim-type="fade-in-up">
 
 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+<!--if/else start-->
+<% nowTime=Time.now.strftime("%H%M").to_i %>
+
+<% if nowTime < 240 %>
+
+<%= render 'shared/commingsoon' %>
+
+<% else %>
+
 <h2><%= render 'shared/callmessage' %></h2>
 </br>
 
@@ -59,9 +70,9 @@
 <h4>一方真ん中の小さなグラスに入っているお料理はお野菜のムースとメニューに書いてありますが３種類のお野菜（下から人参・カリフラワー・パプリカ）を使用したムースになっており上にのせてあるパイ（タイムと黒胡椒をきかせ焼きあげてあります）を手でつまんで野菜のムースに付けながら召し上がっていただくと美味しく頂ける事でしょう。</h4>
 <h5>(新郎新婦からのコメント) リゾーニの歯ごたえがとも可愛くて、素敵な前菜になると思い選びました。</h5>
 
+<% end %>
+
 </div>
-
-
 
 </div>
 </div>

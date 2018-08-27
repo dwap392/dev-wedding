@@ -43,9 +43,20 @@
 
 </div>
 </div>
+
 <div class="row animate-in" data-anim-type="fade-in-up">
 
 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+<!--if/else start-->
+<% nowTime=Time.now.strftime("%H%M").to_i %>
+
+<% if nowTime < 259 %>
+
+<%= render 'shared/commingsoon' %>
+
+<% else %>
+
 <h2><%= render 'shared/callmessage' %></h2>
 </br>
 
@@ -60,9 +71,9 @@
 <h4>とても力強い味わいと奥深い香りを同時に楽しみながら飲んでいただきたいのでこのような形でご提供し皆様に楽しんで頂いているお料理になります。</h4>
 <h5>(新郎新婦からのコメント) 今まで飲んだコンソメスープの中で圧倒的に美味しく、是非皆様にも召し上がって頂きたいと思い、選びました。</h5>
 
+<% end %>
+
 </div>
-
-
 
 </div>
 </div>
