@@ -9,5 +9,6 @@ Rails.application.routes.draw do
   resources :seafood, param: :code
   resources :main, param: :code
   resources :dessert, param: :code
+  root 'welcome#show'
 end
 get '*path', controller: 'application', action: 'render_404'
