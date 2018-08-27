@@ -10,3 +10,4 @@ Rails.application.routes.draw do
   resources :main, param: :code
   resources :dessert, param: :code
 end
+get '*path', controller: 'application', action: 'render_404'
