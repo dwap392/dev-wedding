@@ -6,10 +6,10 @@ services:
     ports:
       - "3000:3000"
     environment:
-      - "DATABASE_HOST=postgre-test.postgres.database.azure.com"
+      - "DATABASE_HOST=jpe-db.postgres.database.azure.com"
       - "DATABASE_PORT=5432"
-      - "DATABASE_USER=nmikuni@postgre-test"
-      - "DATABASE_PASSWORD=N@0k!$M!kun!"
+      - "DATABASE_USER=nmikuni@jpe-db"
+      - "DATABASE_PASSWORD=N@mick39"
     volumes:
       - "./app:/app" #共有フォルダの設定
     stdin_open: true
